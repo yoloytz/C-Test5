@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+//first summit by ytz
+
 namespace WindowsFormsApp3
 {
     public partial class Form1 : Form
@@ -26,7 +28,7 @@ namespace WindowsFormsApp3
                     new LinearGradientBrush(rect,Color.Red,Color.Green,LinearGradientMode.Vertical);
 
             Font font1 = new Font("Times New Roman", 24);
-            string s = "今天是星期二";
+            string s = textBox1.Text;
             FontFamily[] fontfamily1 = FontFamily.Families;
             int y = 0;
             for(int i = 20; i < 200; i += 20)
@@ -36,11 +38,7 @@ namespace WindowsFormsApp3
                 g.DrawString(s, font2, brush1, new PointF(70, y));
                 y += 10;
             }
-            
-        
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        }  private void panel1_Paint(object sender, PaintEventArgs e)
         {
             Pen pen1 = new Pen(Color.YellowGreen);
             Graphics g = this.CreateGraphics();
